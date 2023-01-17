@@ -1,0 +1,53 @@
+
+
+.container-home{
+    /* background-image: url("../assets/fondo.jpg"); */
+    background-color: rgb(40, 38, 38);
+    /* width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important; */
+    
+}
+
+.burger-menu{
+    background-image: url("../assets/fondo.jpg") !important;
+    z-index: 100 !important;
+}
+
+.paginado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: rgb(248, 239, 239);
+}
+
+.accordion-btn{
+    background-color: rgb(40, 38, 38)!important;
+}
+
+.dropdownToggle{
+    width: 17rem;
+    margin-bottom: 1rem;
+}
+
+.flex-column{
+    background-color: transparent;
+    min-width: 1rem;
+    
+}
+
+.navbar{
+    background-color: transparent;
+}
+
+.accordion-body{
+    background-color: rgb(40, 38, 38);
+}
+
+.cards{ 
+    display: flex; 
+    flex-wrap: wrap;
+}

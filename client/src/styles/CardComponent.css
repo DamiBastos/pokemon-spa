@@ -1,0 +1,46 @@
+.card{
+    background: transparent; 
+    border-color: black; 
+    min-width: 22rem;
+    max-width: 25rem;
+    min-height: 10rem;
+    max-height: 22rem;
+    margin:0.3rem;
+    border-radius: 30px;
+    border: 4px solid rgb(26, 7, 70) !important;
+    box-shadow: 6px 6px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    white-space:break-spaces;
+    text-transform: capitalize;
+    background: linear-gradient(blue, black);  
+    margin-bottom: 0 !important;
+}
+
+.card-img-top{
+    background-image: url("../assets/fondo-card.jpg");
+    background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 0 !important;
+}
+
+.card-text{
+    background: linear-gradient( black, rgb(81, 5, 80));  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    text-indent: 0.3rem;
+    text-transform: capitalize;
+}
+

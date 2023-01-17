@@ -1,0 +1,62 @@
+.container-detail{
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.detail-card{
+    background-color: blue !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card-detail-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35rem;
+    height: 2rem;
+    white-space:break-spaces;
+    text-transform: capitalize;
+    background: linear-gradient(blue, black);  
+    margin-bottom: 0 !important;
+}
+
+.card-detail-img{
+    width: 35rem;
+    background-image: url("../assets/fondo-card.jpg");
+    background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 0 !important;
+}
+
+.card-detail-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.detail-type{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    white-space: break-spaces;
+}
+
+.detail-name{
+    text-transform: capitalize;
+
+}
