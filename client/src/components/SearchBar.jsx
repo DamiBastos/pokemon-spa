@@ -36,14 +36,12 @@ export default function SearchBar(){
                 className='input-search'
                 onKeyPress={e => e.key === 'Enter' && handleSubmit(e)}
             />
-            <div className="lupa-search"></div>
-            {/* <button
+            <button
                 type='submit'
                 onClick={e => handleSubmit(e)}
-                className='btn-search'
+                className='lupa-search'
             >
-                <i class="fasfa-search">search</i>
-            </button> */}
+            </button>
         </div>
     )
 }
