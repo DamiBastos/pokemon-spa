@@ -1,35 +1,128 @@
 .container-detail{
-    background-color: aqua;
+    background-color: rgb(255, 0, 0);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
+}
+
+.button-sector{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cardBoton{
+    /* height: 8rem;
+    margin-top: 1rem;
+    border-radius: 100px;
+    box-shadow: 1px 0px 20px 1px rgb(0, 0, 0) */
+  appearance: button;
+  background-color: #083347;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin-top: 2rem;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 8rem;
+    
+}
+
+.cardBoton:after {
+    background-clip: padding-box;
+    background-color: #0f4963;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  .cardBoton:main,
+  .cardBoton:focus {
+  user-select: auto;
+}
+
+.cardBoton:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.cardBoton:disabled {
+  cursor: auto;
+}
+
+.fila1{
+    display: flex !important;
 }
 
 .detail-card{
-    background-color: blue !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: rgb(67, 67, 83) !important;
+    min-width: 20rem;
+    max-width: 48rem;
+    min-height: 30rem;
+    border-radius: 10px;
+    border: 2px solid rgb(121, 118, 130) !important;
+
 }
 
 .card-detail-title{
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 35rem;
-    height: 2rem;
-    white-space:break-spaces;
+    margin: 1rem 1rem 1rem 1rem;
+    border-radius: 1rem;
+    font-size: 4rem;
+    font-family: din-round,sans-serif;
+    font-weight: 500;
+    letter-spacing: .8px;
+    width: 20rem;
     text-transform: capitalize;
-    background: linear-gradient(blue, black);  
-    margin-bottom: 0 !important;
+    background:rgba(76, 76, 99, 0.237); 
+}
+
+
+.name-type{
+    background:rgb(59, 59, 77);
+    color: azure;
+    border-radius: 10px;
+    height: 14.8rem;
+    width: 21.5rem;
+    margin-top: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-detail-img{
-    width: 35rem;
+    width: 15rem !important;
     background-image: url("../assets/fondo-card.jpg");
     background-image: no-repeat;
     background-image: fixed;
@@ -38,25 +131,111 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border-radius: 0 !important;
+    border: 4px solid rgb(33, 30, 41) !important;
+    margin: 1.5rem !important;
+    border-radius: 10px !important;
+}
+
+
+.card-type-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 2rem 2rem 2rem;
+    border-radius: 1rem;
+    text-transform: capitalize;
+    font-size: 4rem;
+    font-family: din-round,sans-serif;
+    font-weight: 500;
+    letter-spacing: .8px;
+    font-size: larger;
+    font-weight: bold;
+    width: 20rem;
+    background:rgba(76, 76, 99, 0.237); 
 }
 
 .card-detail-text{
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
     align-items: center;
+
 }
 
 
-.detail-type{
+
+
+.envolt-barra{
     display: flex;
-    justify-content: center;
+    background-color: white;
+    padding: 2px;
+    width: 30rem;
+    margin-right:1rem;
+    border-radius: 1rem;
+}
+
+.card-detail-text-container{
+    margin: 1rem 1rem 1rem 1rem;
+    color: #080808;
+    font-family: din-round,sans-serif;
+    font-weight: 500;
+    letter-spacing: .8px;
+}
+
+.container-spinner{
+    display: flex;
+    justify-content:flex-start;
     align-items: center;
-    text-transform: capitalize;
-    white-space: break-spaces;
+    margin: 2rem;
+    height: 30rem;
+    width: 15rem;
+    border-radius: 10px;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate, reverse, normal;
+    animation-name: slide-detail;
 }
 
-.detail-name{
-    text-transform: capitalize;
-
+.container-icon{
+    height: 5rem;
+    width: 5rem;
+    background-image: url("../assets/wait.jpg");
+    background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
 }
+
+.container-icon {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate, reverse, normal;
+  animation-name: girar-detail;
+  }
+  
+  @keyframes girar-detail {
+    from {
+      height: 5rem;
+      width: 5rem;
+    }
+  
+    to {
+      height: 5rem;
+      width: 5rem;
+      transform: rotate(720deg)
+    }
+  }
+
+  @keyframes slide-detail {
+    from {
+        margin-left:0%;
+    }
+  
+    to {
+        margin-left:70%;
+    }
+  }

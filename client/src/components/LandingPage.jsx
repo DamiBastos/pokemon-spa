@@ -1,15 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Style from "../styles/Landing.css"
+
 
 export default function LandingPage() {
 
     return(
-        <div>
-            <h1>PokeApp</h1>
-            <h4>Catch and Create your Pokemon!!</h4>
+        <div className="landing-conteiner">
+            <div className="landing-logo"></div>
             <div>
                 <Link to="./home">
-                    <button>LET´s GO</button>
+                    <button className="landing-button">
+                        <div className="logo-button">
+
+                        </div>
+                    </button>
                 </Link>
             </div>
         </div>

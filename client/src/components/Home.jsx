@@ -12,6 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import CardComponent from "./CardComponent"
 import Paginado from "./Paginado"
+import SearchBar from "./SearchBar";
 import Style from "../styles/Home.css"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -82,7 +83,37 @@ export default function Home() {
         <Container className="container-home" fluid>
         <Row>
         <Col md="auto" className="menu">
-                <Navbar className="navbar">
+        <div className="prueba-menu">
+        <div className="oculto">
+        <div className="side-menu">
+                                    <button className="all-button"  onClick={e => {handleClick(e)}}>
+                                        Reloaded pokemons
+                                    </button>
+                                    <select className="select-button" defaultValue="button" onChange={e => handleSortByName(e)}>
+                                        <option className="select-option" value= "button" disabled>Order</option>
+                                        <option className="select-option" value= "all">Default</option>
+                                        <option className="select-option" value= "asc">Ascendente</option>
+                                        <option className="select-option" value= "desc">Descendente</option>
+                                    </select>
+                                    <select className="select-button" defaultValue="filter" onChange={e => handleFilterTypes(e)} >
+                                    <option className="select-option" value= "filter" disabled>Filter type:</option>
+
+                                        <option className="select-option" key={0} value='all'>All types</option>
+                                            {allTypesFilt.map(el => {
+                                                return (
+                                        <option className="select-option" key={el.id} value={el.name}>{el.name}</option>
+                                                            )
+                                                    }) 
+                                            }    
+                                    </select>
+                                    
+                                    </div>
+        </div>
+        <div className="ocultar">
+        <div className="menu-icon"></div>
+         </div>
+        </div>
+                {/* <Navbar className="navbar">
                     <Accordion  defaultActiveKey={['0']} alwaysOpen> 
                         <Accordion.Item><Accordion.Button className="accordion-btn" >
                         </Accordion.Button>
@@ -132,11 +163,13 @@ export default function Home() {
                         </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
-                </Navbar> 
+                </Navbar>  */}
         </Col>
-        <Col>
+        <Col className="col-right">
+        <div className="nav-bar-title">
             <h1 className="title">Pokémon APP</h1>
-        </Col>
+            <div className="search"><SearchBar /></div>
+            </div>
         <Row>
             <Col className="paginado">
         <Paginado 
@@ -144,14 +177,13 @@ export default function Home() {
         />
         </Col>
         </Row>
-        <Container>
 
         <Row >
             
-            <Col  className="cards" > 
+            <div className="cards" > 
                 {
                 // eslint-disable-next-line array-callback-return
-                currentPoke?.map((poke) =>{
+                currentPoke.length > 0 ? currentPoke.map((poke) =>{
                     return(
                         <div  key={poke.id}>
                         
@@ -168,16 +200,21 @@ export default function Home() {
                         
                         </div>
                         )
-                    })
+                    }) : 
+                    <div className="container-waiting"><div className="container-spinner-home">
+                <div className="container-icon-home"></div>
+
+                </div>
+                </div>
                 }
                 
-                </Col>
+                
+                </div>
                 
                 </Row>
                 
-        </Container>
+        </Col>
         </Row>
-
         </Container>
     )
 }

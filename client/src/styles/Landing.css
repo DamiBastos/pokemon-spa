@@ -1,0 +1,66 @@
+.landing-conteiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    height: 100vh;
+}
+
+.landing-logo{
+    background-image: url("../assets/pokemon.png");
+    height: 21.5rem;
+    width: 44.5rem;
+    background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 0 !important;
+}
+
+.landing-button{
+    border-radius: 100px;
+    height: 7rem;
+    width: 7rem;
+    border:0;
+    background-color: transparent;
+}
+
+
+
+.logo-button{
+    background-image: url("../assets/wait.jpg");
+    height: 7.5rem;
+    width: 7.5rem;
+    background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 0 !important;
+}
+
+.logo-button:hover{
+    animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate, reverse, normal;
+  animation-name: girar-landing;
+
+}
+
+@keyframes girar-landing {
+    from {
+        
+
+    }
+  
+    to {
+
+      transform: rotate(360deg)
+    }
+  }

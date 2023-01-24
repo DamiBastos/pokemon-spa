@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 
 export default function CardComponent({id, name, img, types}){
     return(
-        <Card className="card" style={{ width: '15rem' }} >
+        <Card className="card"  >
         <div class="card-title">
         <Card.Title>
             {id}.
@@ -15,10 +15,10 @@ export default function CardComponent({id, name, img, types}){
         </Card.Title>
         </div>
         <Card.Img variant="top"  src={img} class="card-img-top" alt="Not image" />
-            <Card.Text>type: {
+            <Card.Text> type: {
                     types?.map((el) => {
                         return (
-                            <div>
+                            <div className="type-name">
                             {el.name} 
                             </div>
                         )

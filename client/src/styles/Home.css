@@ -20,18 +20,28 @@
     align-items: center;
 }
 
+.nav-bar-title{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border: solid gray;
+    border-width: 0 0 2px;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+
+
 .title {
     color: rgb(248, 239, 239);
+    margin-left: 1rem;
 }
 
 .accordion-btn{
     background-color: rgb(40, 38, 38)!important;
 }
 
-.dropdownToggle{
-    width: 17rem;
-    margin-bottom: 1rem;
-}
+
 
 .flex-column{
     background-color: transparent;
@@ -50,4 +60,160 @@
 .cards{ 
     display: flex; 
     flex-wrap: wrap;
+    justify-content: space-between;
 }
+
+.ocultar{
+    display: flex;
+    width: 10rem;
+    height: 4rem;
+    margin-top: 0.5rem;
+}
+
+
+
+.oculto{
+    width: 12rem;
+    height: 100vh;
+    box-shadow: 0px 0px 20px 1px rgba(255, 255, 255, 0.155);
+    border-radius: 0.5rem;
+}
+
+.home-list{
+    color:aliceblue;
+}
+
+.prueba-menu{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -37rem;
+}
+
+.prueba-menu:hover{
+    flex-direction: column-reverse;
+    top: -0.6rem;
+}
+
+.side-menu{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.menu-icon{
+    background-image: url("../assets/menu-icon.jpg");
+    height: 3rem;
+    width: 3rem;
+    background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 0 !important;
+}
+
+.all-button{
+    color:rgb(83, 86, 88);
+    margin-top: 1.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background-color: transparent;
+    border: 0;
+}
+
+.all-button:hover{
+    background-color: rgb(33, 29, 35);
+    height: 2.5rem;
+    border-radius: 8px;
+}
+
+.select-button{
+    color:rgb(83, 86, 88);
+    margin-top: 1.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background-color: transparent;
+    border: 0;
+}
+
+.select-button:hover{
+    background-color: rgb(33, 29, 35);
+    height: 2.5rem;
+    border-radius: 8px;
+}
+
+.select-option{
+    background-color: rgb(33, 29, 35);
+    border: 0;
+    color:rgb(83, 86, 88);
+}
+
+.container-waiting{
+    width: 100%;
+    border: solid gray;
+    border-width: 0 0 2px;
+}
+
+.container-spinner-home{
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    width: 60rem !important;
+    border-radius: 10px;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate, reverse, normal;
+    animation-name: slide-home;
+
+}
+
+.container-icon-home{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 20rem !important;
+    width: 20rem !important;
+    background-image: url("../assets/wait.jpg");
+    background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+}
+
+.container-icon-home {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate, reverse, normal;
+    animation-name: girar-home;
+  }
+  
+  @keyframes girar-home {
+    from {
+        height: 20rem !important;
+        width: 20rem !important;
+    }
+  
+    to {
+        height: 30rem !important;
+        width: 30rem !important;
+        transform: rotate(360deg);
+    }
+  }
+
+  @keyframes slide-home {
+    from {
+        margin-left:0%;
+    }
+  
+    to {
+        margin-left:60%;
+    }
+  }

@@ -1,17 +1,19 @@
 import { 
     GET_POKEMONS,
-    GET_POKEMON_NAME,
+    GET_NAME_POKEMON,
     GET_DETAIL,
     GET_TYPES,
     FILTER_TYPES,
-    SORT_BY_NAME
+    SORT_BY_NAME,
+    CLEAN_DETAIL
 } from "../actions";
 
 const initialState = {
     pokemons: [],
     allPokemons: [],
     types:[],
-    detail:[]
+    detail:[],
+    myTeam:[]
 }
 
 function rootReducer (state= initialState,action){
@@ -22,7 +24,7 @@ function rootReducer (state= initialState,action){
                     pokemons: action.payload,
                     allPokemons: action.payload
                 };
-            case GET_POKEMON_NAME:
+            case GET_NAME_POKEMON:
                 return {
                     ...state,
                     pokemons: action.payload,
@@ -46,14 +48,23 @@ function rootReducer (state= initialState,action){
                     if (poke.types) {
                         let types = poke.types.map(el => el.name);
                         return types.includes(action.payload);
+                        
                     }
+                    
+
                     return true
                 });
                 return {
                     ...state,
-                    allPokemons: filtered
+                    pokemons: filtered
                 }
             }
+
+            case CLEAN_DETAIL:
+                    return {
+                        ...state,
+                        detail: [],
+                    }
 
             case SORT_BY_NAME:
             const sortedName = action.payload === 'asc' ?
@@ -75,6 +86,14 @@ function rootReducer (state= initialState,action){
                     }
                     return 0;
                 })
+                
+            // case: MY_TEAM:{
+            //     const team = 
+            // return {
+            //     ...state,
+            //     myTeam: team
+            // }
+            // }
             return {
                 ...state,
                 pokemons: sortedName,

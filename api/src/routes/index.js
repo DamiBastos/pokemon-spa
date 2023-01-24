@@ -72,7 +72,6 @@ const getDbInfo = async () => {
     console.log(pokemonTotal)
     if (name) {
       let filterName = await pokemonTotal.filter(el => el.name.toLowerCase().includes(name.toLowerCase()));
-      console.log(filterName)
       filterName.length ?
         res.status(200).send(filterName) :
         res.status(400).send("This pokemon doesn't exist");

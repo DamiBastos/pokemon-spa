@@ -1,0 +1,25 @@
+.search-box{
+    display: flex;
+}
+
+.input-search{
+    border: 0;
+    /* border: solid gray;
+    border-width: 0 0 2px; */
+    background-color: transparent;
+    margin-right: 0.3rem;
+}
+
+.lupa-search{
+    background-image: url("../assets/search.png");
+    height: 2rem;
+    width: 2rem;
+    background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 0 !important;
+}
