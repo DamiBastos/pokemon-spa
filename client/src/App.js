@@ -4,7 +4,7 @@ import LandingPage from "./components/LandingPage";
 import Home from "./components/Home";
 import Detail from './components/Detail';
 import axios from 'axios';
-axios.defaults.baseURL = 'https://pokemon-spa-production.up.railway.app/';
+axios.defaults.baseURL = 'https://pokemon-spa-production.up.railway.app';
 
 
 
