@@ -83,7 +83,7 @@
     color:aliceblue;
 }
 
-.prueba-menu{
+/* .prueba-menu{
     display: flex;
     flex-direction: column;
     position: relative;
@@ -93,19 +93,30 @@
 .prueba-menu:hover{
     flex-direction: column-reverse;
     top: -0.6rem;
+} */
+
+.container-button{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
 }
 
 .side-menu{
-    display: flex;
-    flex-direction: column;
-}
+    height: 100vw;
+    display: flex !important;
+    flex-direction: column !important;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 1px rgba(255, 255, 255, 0.155);
 
+}
 
 
 .menu-icon{
     background-image: url("../assets/menu-icon.jpg");
     height: 3rem;
     width: 3rem;
+    background-color: transparent;
+    border: 0;
     background-image: no-repeat;
     background-image: fixed;
     background-image: center;

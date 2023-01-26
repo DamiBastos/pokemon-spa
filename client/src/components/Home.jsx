@@ -13,17 +13,14 @@ import { Link } from "react-router-dom";
 import CardComponent from "./CardComponent"
 import Paginado from "./Paginado"
 import SearchBar from "./SearchBar";
-import Style from "../styles/Home.css"
+import "../styles/Home.css"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import Accordion from 'react-bootstrap/Accordion';
-import CardGroup from 'react-bootstrap/CardGroup';
-import Dropdown from 'react-bootstrap/Dropdown';
-import Button from 'react-bootstrap/Button';
+import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import Card from 'react-bootstrap/Card';
+
 
 
 
@@ -78,12 +75,33 @@ export default function Home() {
         setOrden(`Ordered ${e.target.value}`);
     }
 
+    //----prueba dropdown
+    function CustomToggle({ children, eventKey }) {
+        const decoratedOnClick = useAccordionButton(eventKey, () =>
+          console.log('totally custom!'),
+        );
+      
+        return (
+            <div className="container-button">
+          <button
+            className="menu-icon"
+            type="button"
+            onClick={decoratedOnClick}
+          >
+            {children}
+          </button>
+          </div>
+        );
+      }
+
+    //-----
+
 
     return(
         <Container className="container-home" fluid>
         <Row>
-        <Col md="auto" className="menu">
-        <div className="prueba-menu">
+        <Col md="auto">
+        {/* <div className="prueba-menu">
         <div className="oculto">
         <div className="side-menu">
                                     <button className="all-button"  onClick={e => {handleClick(e)}}>
@@ -112,58 +130,40 @@ export default function Home() {
         <div className="ocultar">
         <div className="menu-icon"></div>
          </div>
-        </div>
-                {/* <Navbar className="navbar">
-                    <Accordion  defaultActiveKey={['0']} alwaysOpen> 
-                        <Accordion.Item><Accordion.Button className="accordion-btn" >
-                        </Accordion.Button>
-                        <Accordion.Body className="accordion-body">
-                            <Container className="container-menu">
-                                <Nav className="flex-column">
-                                    <Button className="dropdownToggle"  variant="secondary" onClick={e => {handleClick(e)}}>
+        </div> */}
+        {/* prueba dropdown */}
+        <Accordion defaultActiveKey="0">
+          <CustomToggle eventKey="0"></CustomToggle>
+        <Accordion.Collapse eventKey="0">
+          <div className="side-menu" >
+          <button className="all-button"  onClick={e => {handleClick(e)}}>
                                         Reloaded pokemons
-                                    </Button>
-                                    <Dropdown>
-                                    <Dropdown.Toggle className="dropdownToggle"  variant="secondary" id="dropdown-variants-Secondary">
-                                        Sort pokemons by name
-                                    </Dropdown.Toggle>
-                                    <Dropdown.Menu defaultValue="Sort pokemons by name"onChange={e => handleSortByName(e)}>
-                                        <Dropdown.Item value= "all">Default</Dropdown.Item>
-                                        <Dropdown.Item value= "asc">Ascendente</Dropdown.Item>
-                                        <Dropdown.Item value= "desc">Descendente</Dropdown.Item>
-                                    </Dropdown.Menu>
-                                    </Dropdown>
-                                    <Dropdown >
-                                    <Dropdown.Toggle className="dropdownToggle" variant="secondary" id="dropdown-variants-Secondary">
-                                        Filter by types
-                                    </Dropdown.Toggle>
-                                    <Dropdown.Menu  onChange={e => handleFilterTypes(e)} >
-                                        <Dropdown.Item key={0} value='all'>All types</Dropdown.Item>
+                                    </button>
+                                    <select className="select-button" defaultValue="button" onChange={e => handleSortByName(e)}>
+                                        <option className="select-option" value= "button" disabled>Order</option>
+                                        <option className="select-option" value= "all">Default</option>
+                                        <option className="select-option" value= "asc">Ascendente</option>
+                                        <option className="select-option" value= "desc">Descendente</option>
+                                    </select>
+                                    <select className="select-button" defaultValue="filter" onChange={e => handleFilterTypes(e)} >
+                                    <option className="select-option" value= "filter" disabled>Filter type:</option>
+
+                                        <option className="select-option" key={0} value='all'>All types</option>
                                             {allTypesFilt.map(el => {
                                                 return (
-                                        <Dropdown.Item key={el.id} value={el.name}>{el.name}</Dropdown.Item>
+                                        <option className="select-option" key={el.id} value={el.name}>{el.name}</option>
                                                             )
                                                     }) 
                                             }    
-                                    </Dropdown.Menu>
-                                    </Dropdown>
-                                    <Dropdown >
-                                    <Dropdown.Toggle className="dropdownToggle" variant="secondary" id="dropdown-variants-Secondary">
-                                        Filter by created
-                                    </Dropdown.Toggle>
-                                    <Dropdown.Menu >
-                                        <Dropdown.Item value= "all">Todos</Dropdown.Item>
-                                        <Dropdown.Item value= "api">Existentes</Dropdown.Item>
-                                        <Dropdown.Item value= "created">Creados</Dropdown.Item>
-                                    </Dropdown.Menu>
-                                    </Dropdown>
-                                    <Link to='/pokemons'>new</Link>
-                                </Nav>
-                            </Container>
-                        </Accordion.Body>
-                        </Accordion.Item>
-                    </Accordion>
-                </Navbar>  */}
+                                    </select>
+                                    </div>
+                                    
+        </Accordion.Collapse>
+ 
+    </Accordion>
+
+
+
         </Col>
         <Col className="col-right">
         <div className="nav-bar-title">
