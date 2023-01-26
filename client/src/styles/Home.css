@@ -1,8 +1,7 @@
 .container-home{
     background-color: rgb(40, 38, 38);
-    height: 100vh;
+    height: 100vw;
 }
-
 
 .container-button{
     display: flex;
