@@ -15,10 +15,6 @@
 }
 
 .cardBoton{
-    /* height: 8rem;
-    margin-top: 1rem;
-    border-radius: 100px;
-    box-shadow: 1px 0px 20px 1px rgb(0, 0, 0) */
   appearance: button;
   background-color: #083347;
   border: solid transparent;
